@@ -1,5 +1,6 @@
 package com.restclient.config;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
@@ -30,5 +31,11 @@ public class ApplicationConfiguration {
 		
 		return restTemplate;
 	}
+	
+	@Bean
+	public ObjectMapper objectMapper(){
+		return new ObjectMapper();
+	}
+	
 	
 }
